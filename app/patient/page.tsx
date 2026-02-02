@@ -1,4 +1,3 @@
-import { UserButton } from "@clerk/nextjs"
 import { CalendarIcon, FileTextIcon, PersonIcon } from "@radix-ui/react-icons"
 import { BellIcon, Share2Icon } from "lucide-react"
 
@@ -106,26 +105,7 @@ export default function PatientDashboard() {
           />
       </div>
       <div className="max-w-[1600px] mx-auto space-y-8 relative z-10">
-        {/* Header Section */}
-        <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200 dark:border-neutral-800 pb-6">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">Patient Dashboard</h1>
-            <p className="text-muted-foreground mt-2 text-lg">Welcome back. Manage your appointments and health records.</p>
-          </div>
-          <div className="flex items-center gap-4">
-             <div className="rounded-full bg-white dark:bg-neutral-800 p-1 border shadow-sm">
-                <UserButton 
-                  afterSignOutUrl="/"
-                  appearance={{
-                    elements: {
-                      avatarBox: "h-12 w-12"
-                    }
-                  }}
-                />
-             </div>
-          </div>
-        </header>
-
+        
         {/* Bento Grid layout with increased specific row height */}
         <BentoGrid className="auto-rows-[28rem]">
           {features.map((feature, idx) => (
